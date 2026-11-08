@@ -1,0 +1,46 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node build/main.js",
+    "lint": "oxlint -c .oxlintrc.json src/",
+    "lint:fix": "oxlint --fix",
+    "typeorm": "typeorm-ts-node-esm -d ./src/typeorm.config.ts",
+    "migration:generate": "npm run typeorm -- migration:generate ./src/migrations/Migration",
+    "migration:run": "npm run typeorm -- migration:run"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^9.9.3",
+    "@fastify/swagger-ui": "^6.1.3",
+    "@nestjs/axios": "^12.0.1",
+    "@nestjs/common": "^12.0.0",
+    "@nestjs/config": "^12.0.1",
+    "@nestjs/core": "^12.0.0",
+    "@nestjs/platform-fastify": "^12.0.0",
+    "@nestjs/swagger": "^12.1.0",
+    "@nestjs/typeorm": "^12.0.2",
+    "axios": "^1.21.0",
+    "joi": "^18.3.1",
+    "pg": "^8.23.1",
+    "rxjs": "^7.8.1",
+    "typeorm": "1.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "oxlint": "^1.82.0",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.3"
+  }
+}

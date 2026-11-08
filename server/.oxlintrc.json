@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "env": { "node": true, "jest": true, "es2024": true },
+  "plugins": ["typescript", "unicorn", "oxc", "import"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "rules": {
+    "typescript/no-explicit-any": "warn",
+    "typescript/no-extraneous-class": "off",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/prefer-nullish-coalescing": "error",
+    "typescript/prefer-optional-chain": "error",
+    "eqeqeq": ["error", "smart"],
+    "no-console": "error",
+    "no-await-in-loop": "off"
+  },
+  "ignorePatterns": ["eslint.config.mjs", "dist/**", "scripts/**", "coverage/**"],
+  "overrides": [
+    {
+      "files": ["**/*.spec.ts"],
+      "rules": {
+        "typescript/no-non-null-assertion": "off"
+      }
+    }
+  ]
+}
