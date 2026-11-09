@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class LeadSelfLinkDto {
+class LeadSelfLinkDto {
   @ApiProperty({ example: 'https://api.amocrm.ru/api/v4/leads/123' })
   href!: string;
 }
@@ -36,7 +36,7 @@ export class LeadDto {
   _links!: LeadLinksDto;
 }
 
-export class LeadEmbeddedDto {
+class LeadEmbeddedDto {
   @ApiProperty({ type: [LeadDto] })
   leads!: LeadDto[];
 }

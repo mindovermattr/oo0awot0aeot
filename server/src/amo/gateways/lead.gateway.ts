@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { AmoCrmHttpClient } from '../amo-http-client.service.js';
 import { AxiosRequestConfig } from 'axios';
-import { LeadResponseDto } from '../../leads/dto/lead.dto.js';
+import { LeadResponseDto } from '../contracts/index.js';
 
 @Injectable()
 export class LeadGateway {

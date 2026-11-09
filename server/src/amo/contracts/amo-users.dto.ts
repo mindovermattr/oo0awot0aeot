@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class AmoUserDto {
+class AmoUserDto {
   @ApiProperty({ example: 12345678 })
   id!: number;
 
@@ -8,7 +8,7 @@ export class AmoUserDto {
   name!: string;
 }
 
-export class AmoUserEmbeddedDto {
+class AmoUserEmbeddedDto {
   @ApiProperty({ type: [AmoUserDto] })
   users!: AmoUserDto[];
 }
@@ -16,12 +16,4 @@ export class AmoUserEmbeddedDto {
 export class AmoUserResponseDto {
   @ApiProperty({ type: AmoUserEmbeddedDto })
   _embedded!: AmoUserEmbeddedDto;
-}
-
-export class AmoUserMappedResponseDto {
-  @ApiProperty()
-  id!: number;
-
-  @ApiProperty()
-  name!: string;
 }

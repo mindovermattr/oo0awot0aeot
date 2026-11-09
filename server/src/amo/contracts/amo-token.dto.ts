@@ -11,7 +11,7 @@ export class AmoTokenResponseDto {
   refresh_token!: string;
 }
 
-export class AmoTokenBaseDto {
+class AmoTokenBaseDto {
   @ApiProperty({ example: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' })
   client_id!: string;
 
@@ -22,7 +22,7 @@ export class AmoTokenBaseDto {
   redirect_uri!: string;
 }
 
-export class AmoAuthCodeTokenRequestDto extends AmoTokenBaseDto {
+class AmoAuthCodeTokenRequestDto extends AmoTokenBaseDto {
   @ApiProperty({ enum: ['authorization_code'], example: 'authorization_code' })
   grant_type!: 'authorization_code';
 
@@ -30,7 +30,7 @@ export class AmoAuthCodeTokenRequestDto extends AmoTokenBaseDto {
   code!: string;
 }
 
-export class AmoRefreshTokenRequestDto extends AmoTokenBaseDto {
+class AmoRefreshTokenRequestDto extends AmoTokenBaseDto {
   @ApiProperty({ enum: ['refresh_token'], example: 'refresh_token' })
   grant_type!: 'refresh_token';
 

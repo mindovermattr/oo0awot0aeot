@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { LeadLinksDto } from '../../leads/dto/lead.dto.js';
+import { LeadLinksDto } from '../../amo/contracts/index.js';
 
 export class TableLeadDto {
   @ApiProperty({ example: 123 })

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { AmoService } from '../amo/amo.service.js';
 import { GetFiltredLeadsDto } from './dto/get-filtred-leads.dto.js';
-import { LeadDto } from './dto/lead.dto.js';
+import { LeadDto } from '../amo/contracts/index.js';
 
 @Injectable()
 export class LeadsService {

@@ -17,12 +17,12 @@ export class AmoCrmPipelineStatusDto {
   type!: number;
 }
 
-export class AmoCrmPipelineStatusesEmbeddedDto {
+class AmoCrmPipelineStatusesEmbeddedDto {
   @ApiProperty({ type: [AmoCrmPipelineStatusDto] })
   statuses!: AmoCrmPipelineStatusDto[];
 }
 
-export class AmoCrmPipelineDto {
+class AmoCrmPipelineDto {
   @ApiProperty({ example: 1 })
   id!: number;
 
@@ -33,7 +33,7 @@ export class AmoCrmPipelineDto {
   _embedded!: AmoCrmPipelineStatusesEmbeddedDto;
 }
 
-export class AmoCrmPipelinesEmbeddedDto {
+class AmoCrmPipelinesEmbeddedDto {
   @ApiProperty({ type: [AmoCrmPipelineDto] })
   pipelines!: AmoCrmPipelineDto[];
 }
@@ -41,13 +41,4 @@ export class AmoCrmPipelinesEmbeddedDto {
 export class AmoCrmPipelinesResponseDto {
   @ApiProperty({ type: AmoCrmPipelinesEmbeddedDto })
   _embedded!: AmoCrmPipelinesEmbeddedDto;
-}
-
-export class PipelineResponseDto {
-  @ApiProperty()
-  id!: number;
-  @ApiProperty()
-  pipelineName!: string;
-  @ApiProperty({ type: [AmoCrmPipelineStatusDto] })
-  statuses!: AmoCrmPipelineStatusDto[];
 }

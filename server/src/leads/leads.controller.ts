@@ -1,7 +1,7 @@
 import { Controller, Get, ParseIntPipe, Query } from '@nestjs/common';
 import { ApiOkResponse, ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { LeadsService } from './leads.service.js';
-import { LeadDto } from './dto/lead.dto.js';
+import { LeadDto } from '../amo/contracts/index.js';
 
 @ApiTags('leads')
 @Controller('leads')

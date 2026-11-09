@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { AmoTokenRequestDto, AmoTokenResponseDto } from '../oauth/dto/amo-token.dto.js';
+import { AmoTokenRequestDto, AmoTokenResponseDto } from './contracts/index.js';
 import { ConfigService } from '@nestjs/config';
 import { OauthGateway } from './gateways/oauth.gateway.js';
 import { TokenRepository } from './database/repositories/amo-token.repository.js';
